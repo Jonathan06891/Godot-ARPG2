@@ -1,0 +1,317 @@
+[gd_scene load_steps=23 format=2]
+
+[ext_resource path="res://Characters/Pipoya RPG Sprites/PIPOYA FREE RPG Character Sprites 32x32/Male/Male 01-1.png" type="Texture" id=1]
+[ext_resource path="res://Player/Player.gd" type="Script" id=2]
+[ext_resource path="res://Sounds/240640__misscellany__metallic-whoosh.wav" type="AudioStream" id=3]
+[ext_resource path="res://Sounds/59992__qubodup__swosh-sword-swing-[AudioTrimmer.com].wav" type="AudioStream" id=4]
+[ext_resource path="res://Sounds/504618__neospica__knife-thrust-into-wall-[AudioTrimmer.com].wav" type="AudioStream" id=5]
+[ext_resource path="res://Items/Triangle.png" type="Texture" id=6]
+[ext_resource path="res://Items/Shield.png" type="Texture" id=7]
+[ext_resource path="res://Sounds/442769__qubodup__sword-hit.wav" type="AudioStream" id=8]
+
+[sub_resource type="Animation" id=1]
+resource_name = "aiming_left"
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 10 ]
+}
+
+[sub_resource type="Animation" id=2]
+resource_name = "aiming_right"
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 4 ]
+}
+
+[sub_resource type="Animation" id=3]
+loop = true
+step = 0.5
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 1 ]
+}
+
+[sub_resource type="Animation" id=4]
+loop = true
+step = 0.5
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 4 ]
+}
+
+[sub_resource type="Animation" id=5]
+loop = true
+step = 0.5
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 7 ]
+}
+
+[sub_resource type="Animation" id=6]
+loop = true
+step = 0.5
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 10 ]
+}
+
+[sub_resource type="Animation" id=7]
+resource_name = "rest"
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ 4, 5 ]
+}
+
+[sub_resource type="Animation" id=8]
+resource_name = "walk"
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ 4, 5 ]
+}
+
+[sub_resource type="Animation" id=9]
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ 0, 2 ]
+}
+
+[sub_resource type="Animation" id=10]
+loop = true
+step = 0.5
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ 3, 5 ]
+}
+
+[sub_resource type="Animation" id=11]
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ 6, 8 ]
+}
+
+[sub_resource type="Animation" id=12]
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ 9, 11 ]
+}
+
+[sub_resource type="RectangleShape2D" id=13]
+extents = Vector2( 9, 15.56 )
+
+[sub_resource type="RectangleShape2D" id=14]
+extents = Vector2( 10.2098, 15.1627 )
+
+[node name="Player" type="KinematicBody2D" groups=[
+"save",
+]]
+collision_layer = 12
+collision_mask = 12
+script = ExtResource( 2 )
+
+[node name="Camera2D" type="Camera2D" parent="."]
+rotation = 1.5708
+current = true
+
+[node name="Anima" type="AnimationPlayer" parent="."]
+playback_speed = 2.0
+anims/aiming_left = SubResource( 1 )
+anims/aiming_right = SubResource( 2 )
+anims/idledown = SubResource( 3 )
+anims/idleleft = SubResource( 4 )
+anims/idleright = SubResource( 5 )
+anims/idleup = SubResource( 6 )
+anims/rest = SubResource( 7 )
+anims/walk = SubResource( 8 )
+anims/walkdown = SubResource( 9 )
+anims/walkleft = SubResource( 10 )
+anims/walkright = SubResource( 11 )
+anims/walkup = SubResource( 12 )
+
+[node name="Sprite" type="Sprite" parent="."]
+texture = ExtResource( 1 )
+vframes = 4
+hframes = 3
+frame = 11
+
+[node name="Shield" type="Sprite" parent="."]
+modulate = Color( 1, 1, 1, 0 )
+position = Vector2( 0, 4 )
+texture = ExtResource( 7 )
+
+[node name="HitBox" type="CollisionShape2D" parent="."]
+position = Vector2( 0, 1 )
+shape = SubResource( 13 )
+
+[node name="NorthQ" type="Area2D" parent="."]
+collision_layer = 2
+collision_mask = 0
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="NorthQ"]
+polygon = PoolVector2Array( -0.231087, -0.392906, -642.425, -583.735, 698.711, -593.087 )
+
+[node name="EastQ" type="Area2D" parent="."]
+collision_layer = 2
+collision_mask = 0
+
+[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="EastQ"]
+position = Vector2( 0.214638, 0 )
+rotation = 1.5708
+polygon = PoolVector2Array( -0.231087, -0.392906, -590.949, -700.921, 512.003, -713.935 )
+
+[node name="SouthQ" type="Area2D" parent="."]
+collision_layer = 2
+collision_mask = 0
+
+[node name="CollisionPolygon2D3" type="CollisionPolygon2D" parent="SouthQ"]
+rotation = -3.14159
+polygon = PoolVector2Array( -0.231087, -0.392906, -707.428, -512.003, 655.808, -521.764 )
+
+[node name="WestQ" type="Area2D" parent="."]
+collision_layer = 2
+collision_mask = 0
+
+[node name="CollisionPolygon2D4" type="CollisionPolygon2D" parent="WestQ"]
+rotation = -1.5708
+polygon = PoolVector2Array( -0.231087, -0.392906, -518.511, -662.315, 583.735, -645.214 )
+
+[node name="hand" type="Sprite" parent="."]
+rotation = 1.5708
+
+[node name="Aim" type="Position2D" parent="hand"]
+position = Vector2( 10, 0 )
+
+[node name="Sprite" type="Sprite" parent="hand/Aim"]
+position = Vector2( 10, 0 )
+rotation = 1.5708
+scale = Vector2( 0.25, 0.25 )
+texture = ExtResource( 6 )
+
+[node name="knockbox" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="knockbox"]
+position = Vector2( 0, 1 )
+shape = SubResource( 14 )
+
+[node name="Node2D" type="Node2D" parent="."]
+
+[node name="Swordswing" type="AudioStreamPlayer2D" parent="Node2D"]
+stream = ExtResource( 3 )
+volume_db = 16.0
+
+[node name="Dash" type="AudioStreamPlayer2D" parent="Node2D"]
+stream = ExtResource( 4 )
+
+[node name="Hit" type="AudioStreamPlayer2D" parent="Node2D"]
+stream = ExtResource( 5 )
+
+[node name="Block" type="AudioStreamPlayer" parent="Node2D"]
+stream = ExtResource( 8 )
+[connection signal="attack" from="." to="." method="_on_player_attack"]
+[connection signal="dead" from="." to="." method="_on_Player_dead"]
+[connection signal="mouse_entered" from="NorthQ" to="." method="_on_Area2D_mouse_entered"]
+[connection signal="mouse_entered" from="EastQ" to="." method="_on_Area2D2_mouse_entered"]
+[connection signal="mouse_entered" from="SouthQ" to="." method="_on_Area2D3_mouse_entered"]
+[connection signal="mouse_entered" from="WestQ" to="." method="_on_Area2D4_mouse_entered"]
