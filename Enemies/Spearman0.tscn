@@ -1,0 +1,336 @@
+[gd_scene load_steps=23 format=2]
+
+[ext_resource path="res://Enemies/Spearman0.gd" type="Script" id=1]
+[ext_resource path="res://Characters/Pipoya RPG Sprites/PIPOYA FREE RPG Character Sprites 32x32/Soldier/Soldier 06-1.png" type="Texture" id=2]
+[ext_resource path="res://Sounds/351724__scotthopkins__whooshsfx-1-[AudioTrimmer.com].wav" type="AudioStream" id=3]
+[ext_resource path="res://Sounds/504618__neospica__knife-thrust-into-wall-[AudioTrimmer.com].wav" type="AudioStream" id=5]
+[ext_resource path="res://HUD/Unitdisplay.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Items/Triangle.png" type="Texture" id=7]
+
+[sub_resource type="Animation" id=1]
+resource_name = "aiming_left"
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 10 ]
+}
+
+[sub_resource type="Animation" id=2]
+resource_name = "aiming_right"
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 4 ]
+}
+
+[sub_resource type="Animation" id=3]
+loop = true
+step = 0.5
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 1 ]
+}
+
+[sub_resource type="Animation" id=4]
+loop = true
+step = 0.5
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 4 ]
+}
+
+[sub_resource type="Animation" id=5]
+loop = true
+step = 0.5
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 7 ]
+}
+
+[sub_resource type="Animation" id=6]
+loop = true
+step = 0.5
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 10 ]
+}
+
+[sub_resource type="Animation" id=7]
+resource_name = "rest"
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ 4, 5 ]
+}
+
+[sub_resource type="Animation" id=8]
+resource_name = "walk"
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ 4, 5 ]
+}
+
+[sub_resource type="Animation" id=9]
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ 0, 2 ]
+}
+
+[sub_resource type="Animation" id=10]
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ 3, 5 ]
+}
+
+[sub_resource type="Animation" id=11]
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ 6, 8 ]
+}
+
+[sub_resource type="Animation" id=12]
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ 9, 11 ]
+}
+
+[sub_resource type="CircleShape2D" id=16]
+radius = 13.5134
+
+[sub_resource type="CircleShape2D" id=14]
+radius = 462.648
+
+[sub_resource type="CircleShape2D" id=15]
+radius = 65.4404
+
+[sub_resource type="CircleShape2D" id=17]
+radius = 13.3326
+
+[node name="Spearman0" type="KinematicBody2D"]
+collision_layer = 7
+collision_mask = 7
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Anima" type="AnimationPlayer" parent="."]
+playback_speed = 2.0
+anims/aiming_left = SubResource( 1 )
+anims/aiming_right = SubResource( 2 )
+anims/idledown = SubResource( 3 )
+anims/idleleft = SubResource( 4 )
+anims/idleright = SubResource( 5 )
+anims/idleup = SubResource( 6 )
+anims/rest = SubResource( 7 )
+anims/walk = SubResource( 8 )
+anims/walkdown = SubResource( 9 )
+anims/walkleft = SubResource( 10 )
+anims/walkright = SubResource( 11 )
+anims/walkup = SubResource( 12 )
+
+[node name="Sprite" type="Sprite" parent="."]
+texture = ExtResource( 2 )
+vframes = 4
+hframes = 3
+frame = 10
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( 0.418, 0.665 )
+shape = SubResource( 16 )
+
+[node name="NorthQ" type="Area2D" parent="."]
+visible = false
+collision_layer = 8
+collision_mask = 8
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="NorthQ"]
+polygon = PoolVector2Array( -0.0920563, -0.518677, -549.104, -519.674, 566.7, -510.401 )
+
+[node name="WestQ" type="Area2D" parent="."]
+visible = false
+collision_layer = 8
+collision_mask = 8
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="WestQ"]
+polygon = PoolVector2Array( 0.87738, -0.50058, -552.075, -517.139, -554.347, 532.56 )
+
+[node name="SouthQ" type="Area2D" parent="."]
+visible = false
+collision_layer = 8
+collision_mask = 8
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="SouthQ"]
+polygon = PoolVector2Array( -0.999878, -0.999939, -551.514, 535.766, 576.341, 535.766 )
+
+[node name="EastQ" type="Area2D" parent="."]
+visible = false
+collision_layer = 8
+collision_mask = 8
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="EastQ"]
+polygon = PoolVector2Array( -2.69141, -2.98657, 568.789, -509.011, 578.859, 533.248 )
+
+[node name="hand" type="Sprite" parent="."]
+
+[node name="Aim" type="Position2D" parent="hand"]
+position = Vector2( 35.898, 0 )
+
+[node name="Sprite" type="Sprite" parent="hand/Aim"]
+position = Vector2( -11.9197, 0 )
+rotation = 1.5708
+scale = Vector2( 0.25, 0.25 )
+texture = ExtResource( 7 )
+
+[node name="Sightradius" type="Area2D" parent="."]
+collision_layer = 12
+collision_mask = 12
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sightradius"]
+shape = SubResource( 14 )
+
+[node name="Detectradius" type="Area2D" parent="."]
+collision_layer = 2
+collision_mask = 6
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Detectradius"]
+shape = SubResource( 15 )
+
+[node name="knockbox" type="Area2D" parent="."]
+collision_layer = 17
+collision_mask = 17
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="knockbox"]
+position = Vector2( 0, 1 )
+shape = SubResource( 17 )
+
+[node name="Sounds" type="Node2D" parent="."]
+
+[node name="Hit" type="AudioStreamPlayer2D" parent="Sounds"]
+stream = ExtResource( 5 )
+
+[node name="Attack" type="AudioStreamPlayer2D" parent="Sounds"]
+stream = ExtResource( 3 )
+volume_db = 8.0
+
+[node name="UnitDisplay" parent="." instance=ExtResource( 6 )]
+
+[node name="Shoot" type="Timer" parent="."]
+
+[node name="VisibilityEnabler2D" type="VisibilityEnabler2D" parent="."]
+visible = false
+[connection signal="attack" from="." to="." method="_on_Spearman0_attack"]
+[connection signal="health_changed" from="." to="UnitDisplay" method="update_healthbar"]
+[connection signal="stamina_changed" from="." to="UnitDisplay" method="update_staminabar"]
+[connection signal="body_entered" from="NorthQ" to="." method="_on_NorthQ_body_entered"]
+[connection signal="body_entered" from="WestQ" to="." method="_on_WestQ_body_entered"]
+[connection signal="body_entered" from="SouthQ" to="." method="_on_SouthQ_body_entered"]
+[connection signal="body_entered" from="EastQ" to="." method="_on_EastQ_body_entered"]
+[connection signal="body_entered" from="Sightradius" to="." method="_on_Sightradius_body_entered"]
+[connection signal="body_exited" from="Sightradius" to="." method="_on_Sightradius_body_exited"]
+[connection signal="body_entered" from="Detectradius" to="." method="_on_Detectradius_body_entered"]
+[connection signal="body_exited" from="Detectradius" to="." method="_on_Detectradius_body_exited"]
+[connection signal="timeout" from="Shoot" to="." method="_on_Shoot_timeout"]
+[connection signal="screen_entered" from="VisibilityEnabler2D" to="." method="_on_VisibilityEnabler2D_screen_entered"]
+[connection signal="screen_exited" from="VisibilityEnabler2D" to="." method="_on_VisibilityEnabler2D_screen_exited"]

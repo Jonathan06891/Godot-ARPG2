@@ -1,0 +1,61 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://HUD/Stamina Bar.png" type="Texture" id=1]
+[ext_resource path="res://HUD/HUD.gd" type="Script" id=2]
+[ext_resource path="res://HUD/Bar Border.png" type="Texture" id=3]
+[ext_resource path="res://HUD/S Symbol Transparent.png" type="Texture" id=4]
+[ext_resource path="res://HUD/Bar Background.png" type="Texture" id=5]
+[ext_resource path="res://HUD/H Symbol Transparent.png" type="Texture" id=6]
+[ext_resource path="res://HUD/Health Bar.png" type="Texture" id=7]
+
+[node name="HUD" type="CanvasLayer"]
+script = ExtResource( 2 )
+
+[node name="Healthcontainer" type="HBoxContainer" parent="."]
+margin_top = 7.0
+margin_right = 273.0
+margin_bottom = 18.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect2" type="TextureRect" parent="Healthcontainer"]
+margin_right = 7.0
+margin_bottom = 11.0
+texture = ExtResource( 6 )
+
+[node name="HealthBar" type="TextureProgress" parent="Healthcontainer"]
+margin_left = 11.0
+margin_right = 134.0
+margin_bottom = 11.0
+value = 100.0
+texture_under = ExtResource( 5 )
+texture_over = ExtResource( 3 )
+texture_progress = ExtResource( 7 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Staminacontainer" type="HBoxContainer" parent="."]
+margin_left = -1.0
+margin_top = 24.0
+margin_right = 273.0
+margin_bottom = 35.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect" type="TextureRect" parent="Staminacontainer"]
+margin_right = 8.0
+margin_bottom = 11.0
+texture = ExtResource( 4 )
+
+[node name="StaminaBar" type="TextureProgress" parent="Staminacontainer"]
+margin_left = 12.0
+margin_right = 135.0
+margin_bottom = 11.0
+value = 100.0
+allow_greater = true
+texture_under = ExtResource( 5 )
+texture_over = ExtResource( 3 )
+texture_progress = ExtResource( 1 )
